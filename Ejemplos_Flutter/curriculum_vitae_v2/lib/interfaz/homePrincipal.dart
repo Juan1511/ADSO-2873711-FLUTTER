@@ -1,3 +1,4 @@
+import 'package:curriculum_vitae_v1_adso/EducacionFormal/principalEducacionFormal.dart';
 import 'package:curriculum_vitae_v1_adso/ExperienciaLaboral/principalExperienciaLaboral.dart';
 import 'package:curriculum_vitae_v1_adso/Utils/utils.dart';
 import 'package:curriculum_vitae_v1_adso/perfilPersonal/perfilPersonal.dart';
@@ -61,12 +62,7 @@ class _HomePrincipalState extends State<HomePrincipal> {
                   trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () {
                     Navigator.pop(context);
-                    Get.defaultDialog(
-                      title: 'Alerta',
-                      middleText: 'Esta seccion pronto sera Publicada',
-                      onConfirm: () {},
-                      onCancel: () {},
-                    );
+                    Get.to(const PrincipalEducacionFormal());
                   },
                 ),
                 ListTile(
