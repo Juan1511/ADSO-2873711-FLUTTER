@@ -7,7 +7,7 @@ import 'interfaz/principal.dart';
 void main(List<String> args) {
   Get.put(MyController());
   miControlador.cambiarListaExperienciaLaboral(ListaExperienciaLaboral);
-  runApp(Principal());
+  runApp(const Principal());
 }
 
 MyController miControlador =

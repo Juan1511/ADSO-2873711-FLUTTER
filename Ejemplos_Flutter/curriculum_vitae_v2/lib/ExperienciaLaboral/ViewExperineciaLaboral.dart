@@ -9,7 +9,7 @@ viewExperineciaLaboral(BuildContext context, Map elementoActual) {
       builder: (context) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('Visualizar Experiencia Laboral'),
+            title: const Text('Visualizar Experiencia Laboral'),
             backgroundColor: Utils.primaryColor,
             foregroundColor: Utils.foregroundColor,
           ),
@@ -17,33 +17,33 @@ viewExperineciaLaboral(BuildContext context, Map elementoActual) {
             children: [
               ListTile(
                 iconColor: elementoActual['colorCategoria'],
-                leading: Icon(Icons.category),
+                leading: const Icon(Icons.category),
                 title: Text(elementoActual['categoria']),
-                subtitle: Text('Categoria'),
+                subtitle: const Text('Categoria'),
               ),
               ListTile(
                 iconColor: elementoActual['colorCategoria'],
-                leading: Icon(Icons.group_work),
+                leading: const Icon(Icons.group_work),
                 title: Text(elementoActual['titulo']),
-                subtitle: Text('Cargo'),
+                subtitle: const Text('Cargo'),
               ),
               ListTile(
                 iconColor: elementoActual['colorCategoria'],
-                leading: Icon(Icons.work_history),
+                leading: const Icon(Icons.work_history),
                 title: Row(
                   children: [
                     Text(elementoActual["fechaInicio"]),
-                    Text(" |"),
+                    const Text(" |"),
                     Text(elementoActual["fechaFin"]),
                   ],
                 ),
-                subtitle: Text('Periodo Trabajado'),
+                subtitle: const Text('Periodo Trabajado'),
               ),
               ListTile(
                 iconColor: elementoActual['colorCategoria'],
-                leading: Icon(Icons.work),
+                leading: const Icon(Icons.work),
                 title: Text(elementoActual["funciones"]),
-                subtitle: Text('Funciones'),
+                subtitle: const Text('Funciones'),
               ),
             ],
           ),

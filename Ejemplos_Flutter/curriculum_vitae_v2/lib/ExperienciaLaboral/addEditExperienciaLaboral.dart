@@ -44,7 +44,7 @@ showModalAddEditExperiencia(
               backgroundColor: Utils.primaryColor,
               foregroundColor: Utils.foregroundColor,
               child:
-                  opcionAddEdit == "new" ? Icon(Icons.save) : Icon(Icons.edit),
+                  opcionAddEdit == "new" ? const Icon(Icons.save) : const Icon(Icons.edit),
               onPressed: () {
                 //se ejecuta cuando se guarda un elemento de experiencia
                 if (opcionAddEdit == "new") {
@@ -63,7 +63,7 @@ showModalAddEditExperiencia(
                   Get.snackbar("Atencion", "Experiencia agregada con exito",
                       backgroundColor: Colors.green,
                       colorText: Colors.black,
-                      icon: Icon(Icons.add));
+                      icon: const Icon(Icons.add));
                 } else {
                   //logica registro editar
                   Map<String, dynamic> elementEdit = {
@@ -82,7 +82,7 @@ showModalAddEditExperiencia(
                   Get.snackbar("Atencion", "Experiencia editada con exito",
                       backgroundColor: Colors.green,
                       colorText: Colors.black,
-                      icon: Icon(Icons.add));
+                      icon: const Icon(Icons.add));
                 }
               }),
           body: Padding(
@@ -91,31 +91,31 @@ showModalAddEditExperiencia(
               children: [
                 TextFormField(
                   controller: tituloController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Titulo",
                       hintText: "Ingrese titulo de la experiencia"),
                 ),
                 TextFormField(
                   controller: fechaInicioController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Fecha Inicio",
                       hintText: "Ingrese la fecha de inicio de la experiencia"),
                 ),
                 TextFormField(
                   controller: fechaFinController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Fecha Fin",
                       hintText: "Ingrese la fecha fin de la experiencia"),
                 ),
                 TextFormField(
                   controller: funcionesController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Funciones",
                       hintText: "Ingrese las funciones de la experiencia"),
                 ),
                 TextFormField(
                   controller: categoriaController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Categoria",
                       hintText: "Ingrese la categoria de la experiencia"),
                 ),

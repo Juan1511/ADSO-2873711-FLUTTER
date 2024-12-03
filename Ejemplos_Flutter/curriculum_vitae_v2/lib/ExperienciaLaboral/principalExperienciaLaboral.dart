@@ -19,14 +19,14 @@ class _PrincipalexperiencialaboralState
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
           appBar: AppBar(
-            title: Text("Experiencia Laboral"),
+            title: const Text("Experiencia Laboral"),
             backgroundColor: Utils.primaryColor,
             foregroundColor: Utils.foregroundColor,
           ),
           floatingActionButton: FloatingActionButton(
               backgroundColor: Utils.primaryColor,
               foregroundColor: Utils.foregroundColor,
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
               onPressed: () {
                 showModalAddEditExperiencia(context, "new", null, null);
               }),
@@ -49,13 +49,13 @@ class _PrincipalexperiencialaboralState
                             viewExperineciaLaboral(context,
                                 miControlador.ListaExperienciaLab[index]);
                           },
-                          icon: Icon(Icons.search)),
+                          icon: const Icon(Icons.search)),
                       IconButton(
                           onPressed: () {
                             showModalAddEditExperiencia(context, "edit",
                                 miControlador.ListaExperienciaLab[index], index);
                           },
-                          icon: Icon(Icons.edit)),
+                          icon: const Icon(Icons.edit)),
                       IconButton(
                           onPressed: () {
                             Get.defaultDialog(
@@ -70,7 +70,7 @@ class _PrincipalexperiencialaboralState
                               },
                             );
                           },
-                          icon: Icon(Icons.delete)),
+                          icon: const Icon(Icons.delete)),
                     ],
                   ),
                 ),
