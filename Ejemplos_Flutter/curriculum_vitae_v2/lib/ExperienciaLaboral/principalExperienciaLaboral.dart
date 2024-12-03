@@ -1,7 +1,6 @@
 import 'package:curriculum_vitae_v1_adso/ExperienciaLaboral/ViewExperineciaLaboral.dart';
 import 'package:curriculum_vitae_v1_adso/ExperienciaLaboral/addEditExperienciaLaboral.dart';
 import 'package:curriculum_vitae_v1_adso/Utils/utils.dart';
-import 'package:curriculum_vitae_v1_adso/data/experienciaData.dart';
 import 'package:curriculum_vitae_v1_adso/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
