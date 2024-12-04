@@ -1,7 +1,8 @@
 import 'package:curriculum_vitae_v1_adso/EducacionFormal/principalEducacionFormal.dart';
 import 'package:curriculum_vitae_v1_adso/ExperienciaLaboral/principalExperienciaLaboral.dart';
+import 'package:curriculum_vitae_v1_adso/FormacionContinuada/principalFormacionContinuada.dart';
 import 'package:curriculum_vitae_v1_adso/Utils/utils.dart';
-import 'package:curriculum_vitae_v1_adso/perfilPersonal/perfilPersonal.dart';
+import 'package:curriculum_vitae_v1_adso/PerfilPersonal/perfilPersonal.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:curriculum_vitae_v1_adso/main.dart';
@@ -71,10 +72,7 @@ class _HomePrincipalState extends State<HomePrincipal> {
                   trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () {
                     Navigator.pop(context);
-                    Get.snackbar('Atencion', 'Seccion no disponible',
-                        backgroundColor: Colors.red,
-                        colorText: Colors.black,
-                        icon: const Icon(Icons.dangerous));
+                    Get.to(const PrincipalFormacionContinuada());
                   },
                 ),
                 ListTile(

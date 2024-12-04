@@ -5,6 +5,7 @@ class MyController extends GetxController {
       .obs; //definimos una variable tipo string con un observable para verificar cambios dentro de la aplicacion y poder impactar o actualizar algun widget o componente en nustra app
   final _listaExperienciaLaboral = [].obs;
   final _listaEducacionFormal = [].obs;
+  final _listaFormacionContinuada = [].obs;
 
   /// ***********************************************
   void cambiarTitulo(String item) {
@@ -46,8 +47,27 @@ class MyController extends GetxController {
     _listaEducacionFormal[index] = itemEdit;
   }
 
-  String get Titulo => _titulo.value;
-  List get ListaExperienciaLab => _listaExperienciaLaboral.value;
+  /// ********************************************************************
 
+  void addItemListaFormacionContinuada(Map<String, dynamic> item) {
+    _listaFormacionContinuada.add(item);
+  }
+
+  void cambiarListaFormacionContinuada(List item) {
+    _listaFormacionContinuada.value = item;
+  }
+
+  void removeItemListaFormacionContinuada(int index) {
+    _listaFormacionContinuada.removeAt(index);
+  }
+
+  void editItemListaFormacionContinuada(int index, Map itemEdit) {
+    _listaFormacionContinuada[index] = itemEdit;
+  }
+
+  String get Titulo => _titulo.value;
+
+  List get ListaExperienciaLab => _listaExperienciaLaboral.value;
   List get ListaEducacionFormal => _listaEducacionFormal.value;
+  List get ListaFormacionContinuada => _listaFormacionContinuada.value;
 }

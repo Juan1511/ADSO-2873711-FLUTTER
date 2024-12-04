@@ -52,8 +52,11 @@ class _PrincipalexperiencialaboralState
                           icon: const Icon(Icons.search)),
                       IconButton(
                           onPressed: () {
-                            showModalAddEditExperiencia(context, "edit",
-                                miControlador.ListaExperienciaLab[index], index);
+                            showModalAddEditExperiencia(
+                                context,
+                                "edit",
+                                miControlador.ListaExperienciaLab[index],
+                                index);
                           },
                           icon: const Icon(Icons.edit)),
                       IconButton(
@@ -67,6 +70,11 @@ class _PrincipalexperiencialaboralState
                                 miControlador
                                     .removeItemListaExperienciaLaboral(index);
                                 Get.back();
+                                Get.snackbar("Atencion",
+                                    "Experiencia eliminada con exito",
+                                    backgroundColor: Colors.green,
+                                    colorText: Colors.black,
+                                    icon: const Icon(Icons.delete));
                               },
                             );
                           },

@@ -1,24 +1,25 @@
-import 'package:curriculum_vitae_v1_adso/EducacionFormal/addEditEducacionFormal.dart';
-import 'package:curriculum_vitae_v1_adso/EducacionFormal/viewEducacionFormal.dart';
+import 'package:curriculum_vitae_v1_adso/FormacionContinuada/addEditFormacionContinuada.dart';
+import 'package:curriculum_vitae_v1_adso/FormacionContinuada/viewFormacionContinuada.dart';
 import 'package:curriculum_vitae_v1_adso/Utils/utils.dart';
 import 'package:curriculum_vitae_v1_adso/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class PrincipalEducacionFormal extends StatefulWidget {
-  const PrincipalEducacionFormal({super.key});
+class PrincipalFormacionContinuada extends StatefulWidget {
+  const PrincipalFormacionContinuada({super.key});
 
   @override
-  State<PrincipalEducacionFormal> createState() =>
-      _PrincipalEducacionFormalState();
+  State<PrincipalFormacionContinuada> createState() =>
+      _PrincipalFormacionContinuadaState();
 }
 
-class _PrincipalEducacionFormalState extends State<PrincipalEducacionFormal> {
+class _PrincipalFormacionContinuadaState
+    extends State<PrincipalFormacionContinuada> {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
           appBar: AppBar(
-            title: const Text("Educacion Formal"),
+            title: const Text("Formacion Continuada"),
             backgroundColor: Utils.primaryColor,
             foregroundColor: Utils.foregroundColor,
           ),
@@ -27,34 +28,34 @@ class _PrincipalEducacionFormalState extends State<PrincipalEducacionFormal> {
               foregroundColor: Utils.foregroundColor,
               child: const Icon(Icons.add),
               onPressed: () {
-                showModalAddEditEducacionFormal(context, "new", null, null);
+                showModalAddEditFormacionContinuada(context, "new", null, null);
               }),
           body: ListView.builder(
-            itemCount: miControlador.ListaEducacionFormal.length,
+            itemCount: miControlador.ListaFormacionContinuada.length,
             itemBuilder: (BuildContext context, int index) {
               return Card(
                 child: ListTile(
-                  title:
-                      Text(miControlador.ListaEducacionFormal[index]['titulo']),
-                  subtitle: Text(
-                      miControlador.ListaEducacionFormal[index]['categoria']),
-                  leading: Text(
-                      miControlador.ListaEducacionFormal[index]['fechaInicio']),
+                  title: Text(
+                      miControlador.ListaFormacionContinuada[index]['titulo']),
+                  subtitle: Text(miControlador.ListaFormacionContinuada[index]
+                      ['categoria']),
+                  leading: Text(miControlador.ListaFormacionContinuada[index]
+                      ['fechaInicio']),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       IconButton(
                           onPressed: () {
-                            viewEducacionFormal(context,
-                                miControlador.ListaEducacionFormal[index]);
+                            viewFormacionContinuada(context,
+                                miControlador.ListaFormacionContinuada[index]);
                           },
                           icon: const Icon(Icons.search)),
                       IconButton(
                           onPressed: () {
-                            showModalAddEditEducacionFormal(
+                            showModalAddEditFormacionContinuada(
                                 context,
                                 "edit",
-                                miControlador.ListaEducacionFormal[index],
+                                miControlador.ListaFormacionContinuada[index],
                                 index);
                           },
                           icon: const Icon(Icons.edit)),
@@ -63,14 +64,14 @@ class _PrincipalEducacionFormalState extends State<PrincipalEducacionFormal> {
                             Get.defaultDialog(
                               title: "Atencion",
                               middleText:
-                                  "Esta seguro en eliminar el registro con la educacion ${miControlador.ListaEducacionFormal[index]["titulo"]}",
+                                  "Esta seguro en eliminar el registro con la formacion ${miControlador.ListaFormacionContinuada[index]["titulo"]}",
                               onCancel: () {},
                               onConfirm: () {
                                 miControlador
-                                    .removeItemListaEducacionFormal(index);
+                                    .removeItemListaFormacionContinuada(index);
                                 Get.back();
                                 Get.snackbar(
-                                    "Atencion", "Educacion eliminada con exito",
+                                    "Atencion", "Formacion eliminada con exito",
                                     backgroundColor: Colors.green,
                                     colorText: Colors.black,
                                     icon: const Icon(Icons.delete));

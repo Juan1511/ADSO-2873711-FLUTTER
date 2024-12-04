@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../Utils/utils.dart';
 
-viewEducacionFormal(BuildContext context, Map elementoActual) {
+viewFormacionContinuada(BuildContext context, Map elementoActual) {
   showModalBottomSheet(
       isScrollControlled: true,
       context: context,
       builder: (context) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Visualizar Educacion Formal'),
+            title: const Text('Visualizar Formacion Continuada'),
             backgroundColor: Utils.primaryColor,
             foregroundColor: Utils.foregroundColor,
           ),

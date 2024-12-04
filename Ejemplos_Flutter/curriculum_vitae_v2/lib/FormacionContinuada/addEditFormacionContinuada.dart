@@ -18,7 +18,7 @@ void limpiarCampos() {
   categoriaController.clear();
 }
 
-showModalAddEditEducacionFormal(
+showModalAddEditFormacionContinuada(
     context, String opcionAddEdit, dynamic elementoActual, dynamic index) {
   limpiarCampos();
   if (opcionAddEdit == "edit") {
@@ -35,8 +35,8 @@ showModalAddEditEducacionFormal(
         return Scaffold(
           appBar: AppBar(
             title: Text(opcionAddEdit == "new"
-                ? 'Ingresar Educacion'
-                : "editar Educacion"),
+                ? 'Ingresar Formacion'
+                : "editar Formacion"),
             backgroundColor: Utils.primaryColor,
             foregroundColor: Utils.foregroundColor,
           ),
@@ -57,10 +57,10 @@ showModalAddEditEducacionFormal(
                     "categoria": categoriaController.text,
                     "colorCategoria": Colors.blue
                   };
-                  miControlador.addItemListaEducacionFormal(newItem);
+                  miControlador.addItemListaFormacionContinuada(newItem);
                   Get.back();
                   limpiarCampos();
-                  Get.snackbar("Atencion", "Educacion agregada con exito",
+                  Get.snackbar("Atencion", "Formacion agregada con exito",
                       backgroundColor: Colors.green,
                       colorText: Colors.black,
                       icon: const Icon(Icons.add));
@@ -75,11 +75,11 @@ showModalAddEditEducacionFormal(
                     "categoria": categoriaController.text,
                     "colorCategoria": Colors.brown
                   };
-                  miControlador.editItemListaEducacionFormal(
+                  miControlador.editItemListaFormacionContinuada(
                       index, elementEdit);
                   Get.back();
                   limpiarCampos();
-                  Get.snackbar("Atencion", "Educacion editada con exito",
+                  Get.snackbar("Atencion", "Formacion editada con exito",
                       backgroundColor: Colors.green,
                       colorText: Colors.black,
                       icon: const Icon(Icons.add));
@@ -93,32 +93,32 @@ showModalAddEditEducacionFormal(
                   controller: tituloController,
                   decoration: const InputDecoration(
                       labelText: "Titulo",
-                      hintText: "Ingrese titulo de la educacion formal"),
+                      hintText: "Ingrese titulo de la formacion continuada"),
                 ),
                 TextFormField(
                   controller: fechaInicioController,
                   decoration: const InputDecoration(
                       labelText: "Fecha Inicio",
                       hintText:
-                          "Ingrese la fecha de inicio de la educacion formal"),
+                          "Ingrese la fecha de inicio de la formacion continuada"),
                 ),
                 TextFormField(
                   controller: fechaFinController,
                   decoration: const InputDecoration(
                       labelText: "Fecha Fin",
-                      hintText: "Ingrese la fecha fin de la educacion formal"),
+                      hintText: "Ingrese la fecha fin de la formacion continuada"),
                 ),
                 TextFormField(
                   controller: funcionesController,
                   decoration: const InputDecoration(
                       labelText: "Funciones",
-                      hintText: "Ingrese las funciones de la educacion formal"),
+                      hintText: "Ingrese las funciones de la formacion continuada"),
                 ),
                 TextFormField(
                   controller: categoriaController,
                   decoration: const InputDecoration(
                       labelText: "Categoria",
-                      hintText: "Ingrese la categoria de la educacion formal"),
+                      hintText: "Ingrese la categoria de la formacion continuada"),
                 ),
               ],
             ),
