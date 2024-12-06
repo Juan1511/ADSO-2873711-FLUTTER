@@ -1,6 +1,8 @@
 import 'package:curriculum_vitae_v1_adso/EducacionFormal/principalEducacionFormal.dart';
 import 'package:curriculum_vitae_v1_adso/ExperienciaLaboral/principalExperienciaLaboral.dart';
 import 'package:curriculum_vitae_v1_adso/FormacionContinuada/principalFormacionContinuada.dart';
+import 'package:curriculum_vitae_v1_adso/Publicaciones/PrincipalPublicacines.dart';
+import 'package:curriculum_vitae_v1_adso/Referencias/PrincipalReferencias.dart';
 import 'package:curriculum_vitae_v1_adso/Utils/utils.dart';
 import 'package:curriculum_vitae_v1_adso/PerfilPersonal/perfilPersonal.dart';
 import 'package:flutter/material.dart';
@@ -80,8 +82,9 @@ class _HomePrincipalState extends State<HomePrincipal> {
                   leading: const Icon(Icons.newspaper),
                   trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () {
-                    miControlador.cambiarTitulo('Publicaciones');
                     Navigator.pop(context);
+                    Get.to(const Principalpublicacines());
+                    miControlador.cambiarTitulo("Publicaciones");
                   },
                 ),
                 ListTile(
@@ -98,8 +101,9 @@ class _HomePrincipalState extends State<HomePrincipal> {
                   leading: const Icon(Icons.people),
                   trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () {
-                    miControlador.cambiarTitulo('Referencias');
                     Navigator.pop(context);
+                    miControlador.cambiarTitulo('Referencias');
+                    Get.to(const PrincipalReferencias());
                   },
                 ),
                 ListTile(
